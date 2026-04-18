@@ -25,9 +25,10 @@ jobs:
             ${{ runner.os }}-pip-
       - name: Install requirements
         run: |
-          python3 -m pip install --upgrade pip setuptools wheel
-          python3 -m pip install "pybadges==2.2.1"
+          python3 -m pip install --upgrade pip wheel
+          python3 -m pip install "setuptools==65.5.0"
           python3 -m pip install -r requirements.txt
+          python3 -m pip install "pybadges==2.2.1"
           pip install -e .
       - name: create env file
         run: |
